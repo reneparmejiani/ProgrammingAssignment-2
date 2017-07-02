@@ -2,13 +2,6 @@
 ##Week 3 - ProgrammingAssignment2
 
 ## This assignment is to write a pair of functions that cache the inverse of a matrix.
-## These functions introduce a special matrix object which caches its inverse.
-## The create such a special matrix m you execute \code{m <- makeCacheMatrix(x)}
-## where x is an ordinary matrix. You can then get the value with \code{m$get()}
-## and change the value with \code{m$set(y)} where y is an ordinary matrix.
-## You can get the inverse with \code{cacheSolve(m)}.
-
-
 #' Create a special "matrix" object that can cache its inverse.
 #' return a list containing four functions to set and get the value of the
 #' matrix and to set and get the inverse of the matrix
@@ -16,10 +9,12 @@
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
   # Define function to set the value of the matrix. It also clears the old
+ 
   # inverse from the cache
   set <- function(y) {
     x <<- y    # Set the value
-    m <<- NULL # Clear the cache
+    m <<- NULL # Clear the cache 
+    ##m became a NULL vector
   }
   # Define function to get the value of the matrix
   get <- function() x
@@ -84,4 +79,4 @@ getting cached data
 [1,] 1.0666667 0.2666667
 [2,] 0.2666667 1.0666667
 
-## Hard task. Trying to learn. Helped by Gustav W Delius Git.
+## This was the hardest task for me. Trying to learn. Helped by Gustav W Delius Github.
